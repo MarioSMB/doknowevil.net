@@ -61,6 +61,10 @@ article {
     text-align: justify;
 }
 
+article h1:first-of-type {
+    margin-top: 0;
+}
+
 .article-details {
     margin-top: 20px;
 }
@@ -98,11 +102,16 @@ main a:visited {
     color: #009688;
 }
 
-.card .card-action .taglist a:not(.btn):not(.btn-large):not(.btn-floating) {
+.card .card-action .category-action a:not(.btn):not(.btn-large):not(.btn-floating) {
     color: #888;
+    margin: 0;
 }
-.card .card-action .taglist a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+.card .card-action .category-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
     color: #b2dfdb;
+}
+
+a.dropdown-taglist, .dropdown-taglist i {
+    color: #999 !important;
 }
 
 .material-icons.md-18 { font-size: 18px; }
@@ -182,9 +191,10 @@ main .pagination a, main .pagination a:link {
 }
 
 #page-archives dt {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 
 #page-archives dd {
+    font-size: 1.4em;
     color: #ff6d00;
 }

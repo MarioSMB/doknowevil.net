@@ -15,6 +15,8 @@ SITEURL = ''
 
 THEME = 'pelican-materialize-blog'
 
+DEFAULT_DATE_FORMAT = '%b %d, %Y %I:%M %p'
+
 THEME_COLOR = 'blue'
 SIDEBAR_DISPLAY = ['about', 'categories', 'tags']
 SIDEBAR_ABOUT = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae hic dicta eius ad quam eligendi minima praesentium voluptatum? Quidem quaerat eaque libero velit impedit dicta, repudiandae sapiente. Deserunt, excepturi."

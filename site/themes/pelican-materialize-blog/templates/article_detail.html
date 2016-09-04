@@ -2,17 +2,22 @@
   <div class="card grey darken-3">
     <div class="card-content">
       <div>
-        <span class="card-title activator"><a class="teal-text text-lighten-3" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span>
+        <span class="right">
+          <a class="dropdown-taglist" href="#" data-activates="dropdown-{{ article.slug }}"><i class="material-icons md18 vertical-align-middle">label</i> Tags</a>
+          <ul id="dropdown-{{ article.slug }}" class="dropdown-content">
+            {% for tag in article.tags %}
+              <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </span>
+        <span class="card-title"><a class="teal-text text-lighten-3" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span>
         {{ article.summary }}
       </div>
     </div>
     <div class="card-action">
       <a href="{{ SITEURL }}/{{ article.url }}">READ MORE</a>
-      <span class="right taglist">
-        <i class="material-icons md18 vertical-align-middle">label</i>
-        {% for tag in article.tags %}
-          <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-        {% endfor %}
+      <span class="right category-action">
+        <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category.name }}</a>
       </span>
     </div>
   </div>

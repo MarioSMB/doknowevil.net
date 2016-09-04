@@ -18,12 +18,12 @@
 
 {% block content %}
   <article itemscope itemtype="http://schema.org/Article">
-    <h1 itemprop="name" class="article-name">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" class="teal-text text-lighten-3" title="Permalink {{ article.title|striptags }}">
-        {{ article.title }}
-      </a>
-    </h1>
     <div class="card-panel grey darken-3">
+      <h1 itemprop="name">
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" class="teal-text text-lighten-3" title="Permalink {{ article.title|striptags }}">
+          {{ article.title }}
+        </a>
+      </h1>
       <div class="flow-text section no-padding" itemprop="text">
         {{ article.content }}
       </div>
