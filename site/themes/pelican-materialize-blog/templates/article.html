@@ -43,7 +43,10 @@
         </div>
         <div class="col m4 s12">
           <h6><i class="material-icons md18 vertical-align-middle">folder</i> Category</h6>
-          <i class="mdi-action-list" title="Category"> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></i>
+          <i class="mdi-action-list" title="Category"> </i>
+          <div class="chip grey darken-4">
+            <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+          </div>
         </div>
         <div class="col m4 s12">
           <h6><i class="material-icons md18 vertical-align-middle">label</i> Tags</h6>

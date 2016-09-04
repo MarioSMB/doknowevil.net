@@ -6,8 +6,7 @@ My name is Tyler Mulligan, I enjoy programming, tinkering and hacking.
 
 <div class="row">
   <div class="col s12 m6">
-    <h2 class="header">Horizontal Card</h2>
-    <div class="card horizontal">
+    <div class="card horizontal grey darken-3">
       <div class="card-image">
         <img src="http://lorempixel.com/100/190/nature/10">
       </div>
@@ -22,8 +21,7 @@ My name is Tyler Mulligan, I enjoy programming, tinkering and hacking.
     </div>
   </div>
   <div class="col s12 m6">
-    <h2 class="header">Horizontal Card</h2>
-    <div class="card horizontal">
+    <div class="card horizontal grey darken-3">
       <div class="card-image">
         <img src="http://lorempixel.com/100/190/nature/10">
       </div>

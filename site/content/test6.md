@@ -1,7 +1,7 @@
 Title: My Other Really Cool Post
 Date: 2011-11-03 10:20
 Category: Python
-Tags: rainbows, parties, tulips and threelips
+Tags: ice cream, parties
 Slug: my-other-really-cool-post
 Authors: Tyler Mulligan
 Summary:
@@ -10,9 +10,8 @@ Summary:
     <strong>brown paper packages</strong>
 
 
-    #!python
-    # rainbow.py generates rainbow text!
-# Tyler Mulligan
+
+```
 import configparser
 import argparse
 import json
@@ -86,3 +85,4 @@ class Rainbow(object):
         self.index += 1
 
         return result
+```

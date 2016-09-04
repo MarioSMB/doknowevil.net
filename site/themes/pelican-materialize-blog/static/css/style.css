@@ -53,17 +53,16 @@ blockquote {
     border-color: #ff9800;
 }
 
+h1 {
+    color: #ffb74d;
+}
+
 article {
     text-align: justify;
 }
 
 .article-details {
     margin-top: 20px;
-}
-
-article h1.article-name {
-    margin: 0;
-    padding-bottom: .1em;
 }
 
 article .flow-text h1:first-of-type {
@@ -173,4 +172,12 @@ main a:visited {
 
 main .pagination a, main .pagination a:link {
     color: #aaaaaa;
+}
+
+#page-archives dt {
+    font-size: 1.4em;
+}
+
+#page-archives dd {
+    color: #ff6d00;
 }
