@@ -208,6 +208,14 @@ a.dropdown-taglist:hover {
     text-decoration: none;
 }
 
+.side-nav .subheader {
+    color: #fff;
+}
+.side-nav .caret {
+    margin: 0 !important;
+    color: #b0bec5 !important;
+}
+
 .article-details {
     margin-top: 20px;
 }
