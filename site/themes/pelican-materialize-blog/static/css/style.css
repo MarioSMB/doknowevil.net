@@ -1,0 +1,176 @@
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border: 0px none #9e9e9e;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #e0e0e0;
+}
+::-webkit-scrollbar-track {
+  background: #424242;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #757575;
+}
+::-webkit-scrollbar-track:active {
+  background: #212121;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #313131;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+blockquote {
+    border-color: #ff9800;
+}
+
+article {
+    text-align: justify;
+}
+
+.article-details {
+    margin-top: 20px;
+}
+
+article h1.article-name {
+    margin: 0;
+    padding-bottom: .1em;
+}
+
+article .flow-text h1:first-of-type {
+    margin: 0;
+}
+
+article .flow-text h2, article .flow-text h3, article .flow-text h4, article .flow-text h5, article .flow-text h6 {
+    text-align: left;
+    color: #e0e0e0;
+    border-bottom: 1px solid #90a4ae;
+}
+
+article ul li {
+    list-style-type: square;
+    margin-left: 2rem;
+}
+
+pre {
+    color: grey;
+    padding: 0.5em;
+}
+
+main a, main a:link {
+    color: #4db6ac;
+}
+
+main a:hover {
+    color: #b2dfdb;
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: #009688;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.highlighttable {
+    margin: auto;
+    max-width: 100vw;
+}
+
+.highlighttable pre {
+    padding: 0.2em;
+    margin: 0;
+}
+
+.highlighttable td {
+    padding: 5px;
+}
+
+.highlighttable .code {
+    background-color: #2b2b2b;
+    max-width: calc(1280px - 100px);
+    overflow: auto;
+}
+
+.flow-text.section pre {
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
+
+.linenos {
+  vertical-align: top;
+    background-color: #333;
+}
+
+.figure {
+    text-align: center;
+}
+
+.caption {
+    font-size: smaller;
+    margin-top: 0;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.side-nav a {
+    color: #b0bec5;
+}
+
+.side-nav .active a {
+    color: #cfd8dc;
+}
+
+.side-nav .collapsible-body li.active a {
+    color: #fff;
+}
+
+.divider {
+    background: #455a64;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+main .pagination a, main .pagination a:link {
+    color: #aaaaaa;
+}

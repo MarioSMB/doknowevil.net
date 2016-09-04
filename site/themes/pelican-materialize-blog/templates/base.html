@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  {% block head %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>{% block title %}{{ SITENAME }} - {{SITESUBTITLE}}{% endblock title %}</title>
+  <meta charset="utf-8"/>
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed"/>
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed"/>
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed"/>
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed"/>
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed"/>
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed"/>
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed"/>
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed"/>
+  {% endif %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+  {% endblock head %}
+</head>
+
+<body>
+
+  <header>
+    <nav role="navigation" class="blue-grey darken-4">
+      <ul id="slide-out" class="side-nav blue-grey darken-4">
+        <li><div class="userView">
+          <img class="background" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/test2.jpg">
+          <a href="#!user"><img class="circle" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/headshot.png"></a>
+          <a href="#!name"><span class="white-text name">Tyler Mulligan</span></a>
+          <a href="#!email"><span class="white-text email">tyler@doknowevil.net</span></a>
+        </div></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a href="{{SITEURL}}/pages/about.html" class="waves-effect waves-teal"><i class="material-icons blue-grey-text lighten-3 md-18">person</i> About</a></li>
+            <li class="bold"><a href="{{SITEURL}}/archives.html" class="waves-effect waves-teal"><i class="material-icons blue-grey-text lighten-3 md-18">folder</i> Archives</a></li>
+            <li><div class="divider"></div></li>
+            <li class="bold active"><a class="collapsible-header waves-effect{% if 'category/' in page_name %} active{% endif %}">Categories</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  {% if DISPLAY_CATEGORIES_ON_MENU %}
+                  {% for cat, null in categories %}
+                  <li {% if cat == category %} class="blue-grey darken-5 active"{% else %}class="blue-grey darken-2"{% endif %}><a class="category truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+            </li>
+            <li class="bold active"><a class="collapsible-header waves-effect{% if 'tag/' in page_name %} active{% endif %}">Tags</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  {% if 1==1 %}
+                  {% for cat, null in tags %}
+                  <li {% if cat == tag %} class="blue-grey darken-3 active"{% else %}class="blue-grey darken-2"{% endif %}><a class="tag truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons blue-grey-text lighten-4">menu</i></a>
+      <div class="nav-wrapper container">
+        <ul id="top-nav" class="top-nav">
+          <a id="logo-container" href="{{SITEURL}}/" class="brand-logo">{{SITENAME}}</a>
+          <ul id="dropdown" class="dropdown-content">
+            {% if DISPLAY_CATEGORIES_ON_MENU %}
+            {% for cat, null in categories %}
+            <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{{SITEURL}}/pages/about.html">About</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown">Categories<i class="material-icons md-18 right">&#xE313;</i></a></li>
+            <li><a href="{{SITEURL}}/archives.html">Archives</a></li>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container grey-text">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </main>
+
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="grey-text">About</h5>
+          <p class="grey-text">
+            {{ABOUT}}
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="grey-text">Feed</h5>
+          <ul>
+            <li><a class="grey-text" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="Flux Atom du {{ SITENAME }}">Atom</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          {% if SOCIAL %}
+          <h5 class="grey-text">Social</h5>
+          <ul>
+            {% for name, link in SOCIAL %}
+            <li><a class="grey-text" href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center grey-text text-darken-2">
+        Carefully handcrafted with <i class="mdi-action-favorite"></i>
+      </div>
+    </div>
+  </footer>
+
+{% block body_end %}
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/jquery/jquery.min.js"></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/materialize/js/materialize.min.js"></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/init.js"></script>
+{% endblock body_end %}
+</body>
+</html>

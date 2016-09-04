@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="card grey darken-3">
+    <div class="card-content">
+      <div>
+        <span class="card-title activator"><a class="teal-text text-lighten-3" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span>
+        {{ article.summary }}
+      </div>
+    </div>
+    <div class="card-action">
+      <a href="{{ SITEURL }}/{{ article.url }}">READ MORE</a>
+      <span class="right">
+        <i class="mdi-action-label-outline" title="tags"> </i>
+        {% for tag in article.tags %}
+          <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        {% endfor %}
+      </span>
+    </div>
+  </div>
+</div>

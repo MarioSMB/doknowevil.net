@@ -1,0 +1,45 @@
+{% if DEFAULT_PAGINATION and articles_paginator.num_pages>1 %}
+  <div class="container">
+    <div class="row">
+      <div class="center-align">
+        {% if articles_page and articles_paginator.num_pages > 1 %}
+          {% if USE_PAGER %}
+            <ul class="pager">
+              {% if articles_page.has_previous() %}
+                <li class="previous"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="material-icons">chevron_left</i> Newer</a></li>
+              {% else %}
+                <li class="previous disabled"><a href="#"><i class="material-icons">chevron_left</i> Newer</a></li>
+              {% endif %}
+              {% if articles_page.has_next() %}
+                <li class="next"><a
+                    href="{{ SITEURL }}/{{ articles_next_page.url }}">Older <a href="#"><i class="material-icons">chevron_right</i></a></li>
+              {% else %}
+                <li class="next disabled"><a href="#">Older <i class="material-icons">chevron_right</i></a></li>
+              {% endif %}
+            </ul>
+          {% else %}
+            <ul class="pagination">
+              {% if articles_page.has_previous() %}
+                {% set num = articles_page.previous_page_number() %}
+                <li class="waves-effect prev"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="material-icons">chevron_left</i></a>
+                </li>
+              {% else %}
+                <li class="waves-effect prev disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+              {% endif %}
+              {% for num in range( 1, 1 + articles_paginator.num_pages ) %}
+                <li class="waves-effect {{ 'blue-grey darken-3 active' if num == articles_page.number else '' }}"><a
+                    href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
+              {% endfor %}
+              {% if articles_page.has_next() %}
+                <li class="waves-effect next"><a
+                    href="{{ SITEURL }}/{{ articles_next_page.url }}"><i class="material-icons">chevron_right</i></a></li>
+              {% else %}
+                <li class="waves-effect next disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

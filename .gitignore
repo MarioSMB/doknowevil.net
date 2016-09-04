@@ -1,0 +1,8 @@
+venv
+activate
+.idea
+*.swo
+*.swp
+*.pid
+site/output
+**__pycache__**
