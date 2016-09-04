@@ -31,26 +31,20 @@
       <div class="row article-details">
         <div class="col m4 s12">
           <h6><i class="material-icons md18 vertical-align-middle">date_range</i> Date</h6>
-          <i class="mdi-action-event" title="Date Published">
-            <time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="dateCreated">{{ article.locale_date }}</time>
-          </i>
+          <time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="dateCreated">{{ article.locale_date }}</time>
           {% if article.modified %}
             <br/>
-            <i class="mdi-editor-mode-edit" title="Date Modified">
-              <time datetime="{{ article.modified.strftime('%Y-%m-%d') }}" itemprop="dateModified">{{ article.locale_modified }}</time>
-            </i>
+            <time datetime="{{ article.modified.strftime('%Y-%m-%d') }}" itemprop="dateModified">{{ article.locale_modified }}</time>
           {% endif %}
         </div>
         <div class="col m4 s12">
           <h6><i class="material-icons md18 vertical-align-middle">folder</i> Category</h6>
-          <i class="mdi-action-list" title="Category"> </i>
           <div class="chip grey darken-4">
             <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
           </div>
         </div>
         <div class="col m4 s12">
           <h6><i class="material-icons md18 vertical-align-middle">label</i> Tags</h6>
-          <i class="mdi-action-label" title="tags"> </i>
           {% for tag in article.tags %}
           <div class="chip grey darken-4">
             <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>

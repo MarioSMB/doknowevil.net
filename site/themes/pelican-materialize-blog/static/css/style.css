@@ -98,6 +98,13 @@ main a:visited {
     color: #009688;
 }
 
+.card .card-action .taglist a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #888;
+}
+.card .card-action .taglist a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+    color: #b2dfdb;
+}
+
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }

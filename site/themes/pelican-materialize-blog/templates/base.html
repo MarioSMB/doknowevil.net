@@ -106,35 +106,9 @@
   </main>
 
   <footer class="page-footer grey darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="grey-text">About</h5>
-          <p class="grey-text">
-            {{ABOUT}}
-          </p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="grey-text">Feed</h5>
-          <ul>
-            <li><a class="grey-text" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="Flux Atom du {{ SITENAME }}">Atom</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          {% if SOCIAL %}
-          <h5 class="grey-text">Social</h5>
-          <ul>
-            {% for name, link in SOCIAL %}
-            <li><a class="grey-text" href="{{ link }}">{{ name }}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright">
       <div class="container center grey-text text-darken-2">
-        Carefully handcrafted with <i class="mdi-action-favorite"></i>
+        Design by Tyler Mulligan, based on pelican-material
       </div>
     </div>
   </footer>
