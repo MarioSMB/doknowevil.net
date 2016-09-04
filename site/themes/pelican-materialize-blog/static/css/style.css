@@ -61,16 +61,8 @@ article {
     text-align: justify;
 }
 
-article h1:first-of-type {
-    margin-top: 0;
-}
-
-.article-details {
-    margin-top: 20px;
-}
-
-article .flow-text h1:first-of-type {
-    margin: 0;
+article h6 {
+    color: #bdbdbd;
 }
 
 article .flow-text h2, article .flow-text h3, article .flow-text h4, article .flow-text h5, article .flow-text h6 {
@@ -102,22 +94,25 @@ main a:visited {
     color: #009688;
 }
 
-.card .card-action .category-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    color: #888;
-    margin: 0;
-}
-.card .card-action .category-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
-    color: #b2dfdb;
-}
-
-a.dropdown-taglist, .dropdown-taglist i {
-    color: #999 !important;
-}
-
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+
+a.dropdown-taglist, .dropdown-taglist i {
+    color: #999 !important;
+}
+a.dropdown-taglist:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+a.dropdown-taglist i {
+    color: #999 !important;
+}
+a.dropdown-taglist:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
 
 .highlighttable {
     margin: auto;
@@ -184,6 +179,42 @@ a.dropdown-taglist, .dropdown-taglist i {
 .vertical-align-middle {
     vertical-align: middle;
     padding-bottom: 3px;
+}
+
+.dropdown-content {
+    background-color: #455a64;
+}
+.dropdown-content li a {
+    color: #cfd8dc;
+}
+.dropdown-content li:hover {
+    background-color: #607d8b;
+    color: #fff;
+}
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+    background: #607d8b;
+}
+
+.dropdown-content li.active a {
+    color: #fff;
+}
+
+.category-name {
+    margin-right: 10px;
+    color: #78909c !important;
+}
+.category-name:hover {
+    color: #b0bec5 !important;
+    text-decoration: none;
+}
+
+.article-details {
+    margin-top: 20px;
+}
+
+.date-modified {
+    color: #666;
+    font-style: italic;
 }
 
 main .pagination a, main .pagination a:link {

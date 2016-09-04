@@ -15,7 +15,7 @@
         <dt>{{ (month_group|first).date|strftime('%b %Y') }}</dt>
         <dl>
           {% for article in month_group %}
-            <dd>{{ article.date.strftime('%d') }}
+            <dd class="card-panel grey darken-3">{{ article.date.strftime('%d') }} <span class="grey-text">|</span>
               <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
             </dd>
           {% endfor %}
