@@ -2,9 +2,11 @@
 
 {% block title %}{{ SITENAME }} - Archives{% endblock %}
 
-{% block content %}
+{% block breadcrumbs %}
+  {{ macros.render_breadcrumbs([{'url': '#', 'name': 'Archives' }]) }}
+{% endblock %}
 
-  <h1>Archives</h1>
+{% block content %}
 
   <div id="page-archives">
 

@@ -2,11 +2,20 @@
 
 {% block title %}{{ SITENAME }} - Categories{% endblock %}
 
+{% block breadcrumbs %}
+  {{ macros.render_breadcrumbs([{'url': '/categories', 'name': 'Categories'}]) }}
+{% endblock %}
+
 {% block content %}
-<h1 class="blue-grey-text text-lighten-1">Categories</h1>
-<div class="collection">
-    {%- for cat, articles in categories|sort_by_article_count %}
-    <a class="collection-item black" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <sup>{{ articles|count }}</sup></a>
+
+  <div id="page-categories">
+
+    {%- for category, articles in categories|sort_by_article_count %}
+      <div class="card-panel grey darken-3">{{ articles|count }} Articles <span class="grey-text">|</span>
+        <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+      </div>
     {% endfor %}
-<div>
+
+  </div>
+
 {% endblock %}

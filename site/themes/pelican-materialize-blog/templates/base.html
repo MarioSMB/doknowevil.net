@@ -1,3 +1,5 @@
+{% import 'macros.html' as macros %}
+
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
@@ -88,24 +90,16 @@
         <ul id="top-nav" class="top-nav">
           <li><a id="logo-container" href="{{SITEURL}}/" class="brand-logo">{{SITENAME}}</a></li>
           <ul class="right hide-on-med-and-down">
-            <li><a href="{{SITEURL}}/" class="waves-effect waves-teal">Home</a></li>
             <li><a href="{{SITEURL}}/pages/about.html" class="waves-effect waves-teal">About</a></li>
-            <li>
-              <a class="dropdown-button" href="#!" data-activates="dropdown">Categories<i class="material-icons md-18 right">&#xE313;</i></a>
-              <ul id="dropdown" class="dropdown-content">
-                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                {% for cat, null in categories %}
-                <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}
-                {% endif %}
-              </ul>
-            </li>
             <li><a href="{{SITEURL}}/archives.html" class="waves-effect waves-teal">Archives</a></li>
           </ul>
         </ul>
       </div>
     </nav>
+    {% block breadcrumbs %}
+    {% endblock breadcrumbs %}
   </header>
+
 
   <main>
     <div class="container grey-text">

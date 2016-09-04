@@ -3,7 +3,7 @@
     <div class="card-content">
       <span class="right">
         <a href="{{ SITEURL }}/{{ article.category.url }}" class="category-name"><i class="material-icons md18 vertical-align-middle">folder</i> {{ article.category.name }}</a>
-        <a class="dropdown-taglist" href="#" data-activates="dropdown-{{ article.slug }}"><i class="material-icons md18 vertical-align-middle">label</i> Tags</a>
+        <a class="dropdown-taglist" href="#" data-activates="dropdown-{{ article.slug }}" data-hover="true"><i class="material-icons md18 vertical-align-middle">label</i> Tags</a>
         <ul id="dropdown-{{ article.slug }}" class="dropdown-content">
           {% for tag in article.tags %}
             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>

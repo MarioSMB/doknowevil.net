@@ -2,10 +2,7 @@
   $(function(){
     $('.button-collapse').sideNav();
     $('.dropdown-button').dropdown();
-    $('.dropdown-taglist').dropdown({
-      hover: true,
-      constrain_width: false
-    });
+    $('.dropdown-taglist').dropdown();
     $('.materialboxed').materialbox();
   });
 })(jQuery);

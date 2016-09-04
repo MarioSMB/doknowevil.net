@@ -1,0 +1,12 @@
+{% macro render_breadcrumbs(breadcrumbs) -%}
+  <nav id="breadcrumbs">
+    <div class="nav-wrapper container">
+      <div class="col s12">
+        <a href="/" class="breadcrumb"><i class="material-icons">home</i></a>
+        {% for crumb in breadcrumbs %}
+        <a href="{{ crumb.url|e }}.html" class="breadcrumb">{{ crumb.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+{%- endmacro %}

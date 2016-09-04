@@ -76,6 +76,10 @@ article ul li {
     margin-left: 2rem;
 }
 
+article h1:first-of-type {
+    margin: 0 0 0.2em;
+}
+
 pre {
     color: grey;
     padding: 0.5em;
@@ -113,6 +117,10 @@ a.dropdown-taglist:hover {
     color: #fff !important;
     text-decoration: none;
 }
+
+#breadcrumbs {
+    background-color: #37474f;
+} 
 
 .highlighttable {
     margin: auto;
@@ -236,4 +244,8 @@ main .pagination a, main .pagination a:link {
 #page-archives dd {
     font-size: 1.4em;
     color: #ff6d00;
+}
+
+footer.page-footer {
+    padding-top: 0;
 }

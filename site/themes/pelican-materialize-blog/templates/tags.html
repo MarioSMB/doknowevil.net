@@ -2,11 +2,20 @@
 
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
+{% block breadcrumbs %}
+  {{ macros.render_breadcrumbs([{'url': '/tags', 'name': 'Tags'}]) }}
+{% endblock %}
+
 {% block content %}
-  <h1 class="blue-grey-text text-lighten-1">Tags</h1>
-  <div class="collection">
-  {%- for tag, articles in tags|sort_by_article_count %}
-    <a class="collection-item black" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <sup>{{ articles|count }}</sup></a>
-  {% endfor %}
-  <div>
+
+  <div id="page-tags">
+
+    {%- for tag, articles in tags|sort_by_article_count %}
+      <div class="card-panel grey darken-3">{{ articles|count }} Articles <span class="grey-text">|</span>
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+      </div>
+    {% endfor %}
+
+  </div>
+
 {% endblock %}
