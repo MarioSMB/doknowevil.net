@@ -98,6 +98,18 @@ main a:visited {
     color: #009688;
 }
 
+table {
+    background: #333;
+}
+
+td, th {
+    padding: 15px;
+}
+
+th {
+    background: #212121;
+}
+
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -120,7 +132,11 @@ a.dropdown-taglist:hover {
 
 #breadcrumbs {
     background-color: #37474f;
-} 
+}
+
+.no-margin {
+    margin: 0;
+}
 
 .highlighttable {
     margin: auto;

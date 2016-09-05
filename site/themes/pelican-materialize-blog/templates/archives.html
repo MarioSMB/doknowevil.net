@@ -18,7 +18,7 @@
         <dl>
           {% for article in month_group %}
             <dd class="card-panel grey darken-3">{{ article.date.strftime('%d') }} <span class="grey-text">|</span>
-              <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+              <a href="{{ SITEURL }}/{{ article.url }}" class="teal-text text-lighten-3">{{ article.title }}<span class="right" style="color:#ffab40;">READ</span></a>
             </dd>
           {% endfor %}
         </dl>

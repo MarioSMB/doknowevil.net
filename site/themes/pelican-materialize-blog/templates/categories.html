@@ -13,8 +13,8 @@
     {%- for category, articles in categories|sort_by_article_count %}
       <div class="col s6 m4">
         <div class="card-panel grey darken-3">
-          <h4><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></h4>
-          {{ articles|count }} Articles
+          <h4><a class="teal-text text-lighten-3" href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></h4>
+          <p>{{ articles|count }} Articles</p>
         </div>
       </div>
     {% endfor %}
