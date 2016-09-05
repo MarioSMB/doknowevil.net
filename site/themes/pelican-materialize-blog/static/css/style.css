@@ -13,7 +13,7 @@
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #eeeeee;
+  background: #aaa;
 }
 ::-webkit-scrollbar-thumb:active {
   background: #e0e0e0;
@@ -24,7 +24,7 @@
   border-radius: 50px;
 }
 ::-webkit-scrollbar-track:hover {
-  background: #757575;
+  background: #666;
 }
 ::-webkit-scrollbar-track:active {
   background: #212121;
@@ -47,6 +47,7 @@ header {
 
 main {
     flex: 1 0 auto;
+    z-index: 100;
 }
 
 blockquote {
@@ -77,6 +78,10 @@ article ul li {
 
 article h1:first-of-type {
     margin: 0 0 0.2em;
+}
+
+article.card-panel {
+    margin: -25.5rem 0 1rem 0;
 }
 
 pre {
@@ -262,14 +267,14 @@ main .pagination a, main .pagination a:link {
 }
 
 input[type="search"] {
-  height: 60px !important; /* or height of nav */
+  height: 64px !important; /* or height of nav */
   margin: 0;
 }
 .input-field input[type=search] {
     padding-left: 2rem;
 }
 .input-field input[type=search]:focus {
-    background-color: #212121;
+    background-color: #1c2529;
     border: 0;
     box-shadow: none;
     color: #fff;
@@ -283,8 +288,12 @@ input[type="search"] {
     color: #aed581;
 }
 
-.parallax-container {
+.parallax-container-sm {
     height: 200px;
+    width: 100%;
+}
+
+.parallax-container {
     width: 100%;
 }
 

@@ -94,7 +94,7 @@
             <li>
               <form action="/search.html">
                 <div class="input-field">
-                  <input id="search" type="search" name="q" required placeholder="Search...">
+                  <input id="search" type="search" name="q" required autocomplete="off" placeholder="Search...">
                 </div>
               </form>
             </li>
@@ -111,12 +111,11 @@
       {% if article %}
         {{ macros.render_breadcrumbs([{'url': '/archives.html', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
         <div class="parallax-container">
-          <div class="parallax"><img src="/theme/images/test-wide.png"></div>
+          <div class="parallax"><img src="/theme/images/test-wide2.png"></div>
         </div>
       {% endif %}
     {% endblock breadcrumbs %}
   </header>
-
 
   <main>
     <div class="container grey-text">
