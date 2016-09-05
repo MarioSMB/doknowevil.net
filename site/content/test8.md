@@ -1,5 +1,5 @@
 Title: My Other Really Cool Post 3
-Date: 2011-12-09 10:20
+Date: 2011-12-06 10:20
 Category: Python
 Tags: nature
 Slug: my-other-really-cool-post-3

@@ -1,5 +1,5 @@
 Title: My Really Cool Post
-Date: 2010-11-03 10:20
+Date: 2013-05-04 10:20
 Category: Python
 Tags: pelican, rainbows
 Slug: my-really-cool-post
