@@ -4,5 +4,6 @@
     $('.dropdown-button').dropdown();
     $('.dropdown-taglist').dropdown();
     $('.materialboxed').materialbox();
+    $('.parallax').parallax();
   });
 })(jQuery);
