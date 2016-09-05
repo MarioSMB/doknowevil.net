@@ -8,11 +8,14 @@
 
 {% block content %}
 
-  <div id="page-tags">
+  <div id="page-tags" class="row">
 
     {%- for tag, articles in tags|sort_by_article_count %}
-      <div class="card-panel grey darken-3">{{ articles|count }} Articles <span class="grey-text">|</span>
-        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+      <div class="col s6 m4">
+        <div class="card-panel grey darken-3">
+          <h4 class="no-margin"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></h4>
+          {{ articles|count }} Articles
+        </div>
       </div>
     {% endfor %}
 

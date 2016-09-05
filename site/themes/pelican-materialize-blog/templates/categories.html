@@ -8,11 +8,14 @@
 
 {% block content %}
 
-  <div id="page-categories">
+  <div id="page-categories" class="row">
 
     {%- for category, articles in categories|sort_by_article_count %}
-      <div class="card-panel grey darken-3">{{ articles|count }} Articles <span class="grey-text">|</span>
-        <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+      <div class="col s6 m4">
+        <div class="card-panel grey darken-3">
+          <h4><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></h4>
+          {{ articles|count }} Articles
+        </div>
       </div>
     {% endfor %}
 
