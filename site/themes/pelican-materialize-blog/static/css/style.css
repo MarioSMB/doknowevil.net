@@ -195,6 +195,9 @@ a.dropdown-taglist:hover {
 .dropdown-content li a {
     color: #cfd8dc;
 }
+.dropdown-content li a:hover {
+    text-decoration: none;
+}
 .dropdown-content li:hover {
     background-color: #607d8b;
     color: #fff;

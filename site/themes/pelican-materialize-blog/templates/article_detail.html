@@ -2,11 +2,12 @@
   <div class="card grey darken-3">
     <div class="card-content">
       <span class="right">
-        <a href="{{ SITEURL }}/{{ article.category.url }}" class="category-name"><i class="material-icons md18 vertical-align-middle">folder</i> {{ article.category.name }}</a>
-        <a class="dropdown-taglist" href="#" data-activates="dropdown-{{ article.slug }}" data-hover="true"><i class="material-icons md18 vertical-align-middle">label</i> Tags</a>
+        <a class="dropdown-taglist" href="#" data-activates="dropdown-{{ article.slug }}" data-hover="true" data-constrainwidth="false" data-alignment="right"><i class="material-icons md18 vertical-align-middle">info</i></a>
         <ul id="dropdown-{{ article.slug }}" class="dropdown-content">
+          <li class="blue-grey darken-3"><a href="{{ SITEURL }}/{{ article.category.url }}" class="category-name"><i class="material-icons md18 vertical-align-middle">folder</i> {{ article.category.name }}</a></li>
+          <li class="divider"></li>
           {% for tag in article.tags %}
-            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            <li><a href="{{ SITEURL }}/{{ tag.url }}"><span class="blue-grey-text lighten-1">#</span>{{ tag }}</a></li>
           {% endfor %}
         </ul>
       </span>
