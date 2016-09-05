@@ -1,5 +1,5 @@
 Title: My Other Really Cool Post 6
-Date: 2012-12-29 10:20
+Date: 2016-03-11 10:20
 Category: Python
 Tags: rainbows, parties, tulips and threelips
 Slug: my-other-really-cool-post-6
@@ -8,6 +8,10 @@ Summary:
     Raindrops on roses
     Whiskers on kittens
     <strong>brown paper packages</strong>
+    
+* test 1
+    * test 2
+    * test 3
 
 
 ```

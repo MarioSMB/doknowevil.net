@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
   {% endblock head %}
+  {% block extra_css %}{% endblock %}
 </head>
 
 <body>
@@ -90,23 +91,30 @@
         <ul id="top-nav" class="top-nav">
           <li><a id="logo-container" href="{{SITEURL}}/" class="brand-logo">{{SITENAME}}</a></li>
           <ul class="right hide-on-med-and-down">
+            <li>
+              <form action="/search.html">
+                <div class="input-field">
+                  <input id="search" type="search" name="q" required placeholder="Search...">
+                </div>
+              </form>
+            </li>
             <li><a href="{{SITEURL}}/pages/about.html" class="waves-effect waves-teal">About</a></li>
             <li><a href="{{SITEURL}}/archives.html" class="waves-effect waves-teal">Archives</a></li>
           </ul>
         </ul>
       </div>
     </nav>
-      {% block breadcrumbs %}
-        {% if page %}
-          {{ macros.render_breadcrumbs([{'url': '#', 'name': page.title }]) }}
-        {% endif %}
-        {% if article %}
-          {{ macros.render_breadcrumbs([{'url': 'archives', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
-          <div class="parallax-container">
-            <div class="parallax"><img src="/theme/images/test-wide.png"></div>
-          </div>
-        {% endif %}
-      {% endblock breadcrumbs %}
+    {% block breadcrumbs %}
+      {% if page %}
+        {{ macros.render_breadcrumbs([{'url': '#', 'name': page.title }]) }}
+      {% endif %}
+      {% if article %}
+        {{ macros.render_breadcrumbs([{'url': 'archives', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
+        <div class="parallax-container">
+          <div class="parallax"><img src="/theme/images/test-wide.png"></div>
+        </div>
+      {% endif %}
+    {% endblock breadcrumbs %}
   </header>
 
 
@@ -128,6 +136,7 @@
 {% block body_end %}
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/jquery/jquery.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/materialize/js/materialize.min.js"></script>
+{% block extra_js %}{% endblock %}
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/init.js"></script>
 {% endblock body_end %}
 </body>

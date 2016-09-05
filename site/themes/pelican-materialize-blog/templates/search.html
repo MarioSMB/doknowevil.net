@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Search {{ super() }}
+{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/vendor/tipue_search/css/tipue_search.css" />
+{% endblock %}
+
+{% block extra_js %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_content.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({
+        'mode' : 'json',
+        'show': 10,
+        'newWindow': false,
+        'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+      });
+      $('#tipue_search_button').click(function() {
+        $('#search-form').submit();
+      });
+    });
+  </script>
+{% endblock extra_js %}
+
+{% block content %}
+
+<form id="tipue_search_form" action="/search.html" onsubmit="return (this.elements['q'].value.length > 0)">
+  <div class="row">
+    <div class="col md6 offset-m3">
+      <input id="tipue_search_input" type="text" name="q" size="40" placeholder="Search">
+    </div>
+    <div class="col md2">
+      <button id="tipue_search_button" class="waves-effect waves-light btn">search</button>
+    </div>
+  </div>
+  <div id="tipue_search_content"></div>
+</form>
+
+
+{% endblock content %}

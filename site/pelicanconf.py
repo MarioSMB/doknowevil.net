@@ -15,11 +15,13 @@ SITEURL = ''
 
 THEME = 'pelican-materialize-blog'
 
-DEFAULT_DATE_FORMAT = '%b %d, %Y %I:%M %p'
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search'))
+PLUGIN_PATHS = ["plugins", "/home/z/dev/pelican-plugins/"]
+PLUGINS = ["assets", "liquid_tags", "sitemap", "tipue_search"]
 
-THEME_COLOR = 'blue'
-SIDEBAR_DISPLAY = ['about', 'categories', 'tags']
-SIDEBAR_ABOUT = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae hic dicta eius ad quam eligendi minima praesentium voluptatum? Quidem quaerat eaque libero velit impedit dicta, repudiandae sapiente. Deserunt, excepturi."
+TIPUE_SEARCH = True
+
+DEFAULT_DATE_FORMAT = '%b %d, %Y %I:%M %p'
 
 PATH = 'content'
 
@@ -37,7 +39,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('here','#'),)
+LINKS = (('here', '#'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

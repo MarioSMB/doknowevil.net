@@ -1,8 +1,8 @@
-Title: My Really Cool Post
-Date: 2015-10-05 10:20
-Category: Python
-Tags: rainbows, kittens
-Slug: my-really-cool-post-3
+Title: Pelican Style Guide
+Date: 2015-10-06 10:20
+Category: Publishing
+Tags: markdown
+Slug: spec-style-guide
 Authors: Tyler Mulligan
 
 spec-style-guide
@@ -24,14 +24,14 @@ Just started. Wait until 0.5.0 to take it semi-seriously. Feedback welcomed.
 * [1.0 Revision History](#10-revision-history)
 * [2.0 Goals](#20-goals)
 * [3.0 Style Guide](#30-style-guide)
-  * [3.1 Table of Contents](#31-table-of-contents)
-    * [3.1.0 Less is More (LiM) ToC](#310-less-is-more-lim-toc)
-    * [3.1.1 Explicit Anchor ToC](#311-explicit-anchor-toc)
-  * [3.2 Markdown Style Basics](#32-markdown-style-basics)
-    * [3.2.0 Github Flavored Markdown](#320-github-flavored-markdown)
-  * [3.3 Tables](#33-tables)
-    * [3.3.0 Markdown Tables](#330-markdown-tables)
-    * [3.3.1 HTML Tables](#331-html-tables)
+    * [3.1 Table of Contents](#31-table-of-contents)
+        * [3.1.0 Less is More (LiM) ToC](#310-less-is-more-lim-toc)
+        * [3.1.1 Explicit Anchor ToC](#311-explicit-anchor-toc)
+    * [3.2 Markdown Style Basics](#32-markdown-style-basics)
+        * [3.2.0 Github Flavored Markdown](#320-github-flavored-markdown)
+    * [3.3 Tables](#33-tables)
+        * [3.3.0 Markdown Tables](#330-markdown-tables)
+        * [3.3.1 HTML Tables](#331-html-tables)
 * [Appendix A: Glossary](#appendix-a-glossary)
 * [Appendix B: Examples](#appendix-b-examples)
 * [Appendix C: Acknowledgements and Contributors](#appendix-c-acknowledgements-and-contributors)
@@ -102,8 +102,8 @@ This document uses the LiM approach:
 ## Table of Contents
 * [1.0 Revision History](#10-revision-history)
 * [2.0 Section 2](#20-section-2)
-  * [2.1 Section 2.1](#21-section-21)
-  * [2.2 Some Really Cool Section](#22-some-really-cool-section)
+    * [2.1 Section 2.1](#21-section-21)
+    * [2.2 Some Really Cool Section](#22-some-really-cool-section)
 * [3.0 LiM](#30-lim)
 
 ## 1.0 Revision History
@@ -128,8 +128,8 @@ If your specification requires explicit anchor tags, you can define them:
 ## Table of Contents
 * [1.0 Revision History](#rev-history)
 * [2.0 Section 2](#sec-2)
-  * [2.1 Section 2.1](#sec-2-1)
-  * [2.2 Some Really Cool Section](#sec-2-2)
+    * [2.1 Section 2.1](#sec-2-1)
+    * [2.2 Some Really Cool Section](#sec-2-2)
 * [3.0 Explicit](#because-i-wanted-a-really-long-descriptive-anchor)
 
 
@@ -212,50 +212,50 @@ __strong emphasis__
 1. Item 1
 2. Item 2
 3. Item 3
-  * Sub-item 1
-  * Sub-item 2
-  * Sub-item 3
+    * Sub-item 1
+    * Sub-item 2
+    * Sub-item 3
   
 ```
 
 1. Item 1
 2. Item 2
 3. Item 3
-  * Sub-item 1
-  * Sub-item 2
-  * Sub-item 3
+    * Sub-item 1
+    * Sub-item 2
+    * Sub-item 3
 
 ```
 - Item 1
 - Item 2
 - Item 3
-  - Sub-item 1
-  - Sub-item 2
-  - Sub-item 3
+    - Sub-item 1
+    - Sub-item 2
+    - Sub-item 3
 ```
 
 - Item 1
 - Item 2
 - Item 3
-  - Sub-item 1
-  - Sub-item 2
-  - Sub-item 3
+    - Sub-item 1
+    - Sub-item 2
+    - Sub-item 3
 
 ```
 * Item 1
 * Item 2
 * Item 3
-  * Sub-item 1
-  * Sub-item 2
-  * Sub-item 3
+    * Sub-item 1
+    * Sub-item 2
+    * Sub-item 3
 ```
 
 * Item 1
 * Item 2
 * Item 3
-  * Sub-item 1
-  * Sub-item 2
-  * Sub-item 3
+    * Sub-item 1
+    * Sub-item 2
+    * Sub-item 3
 
 
 ##### Quotes

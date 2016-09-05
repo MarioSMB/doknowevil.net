@@ -261,6 +261,11 @@ main .pagination a, main .pagination a:link {
     color: #aaaaaa;
 }
 
+input[type="search"] {
+  height: 60px !important; /* or height of nav */
+  margin: 0;
+}
+
 #page-archives dt {
     font-size: 1.6em;
 }
