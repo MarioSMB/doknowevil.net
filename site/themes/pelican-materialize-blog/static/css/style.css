@@ -132,6 +132,9 @@ a.dropdown-taglist:hover {
 #breadcrumbs {
     background-color: #37474f;
 }
+a.breadcrumb:hover {
+    color: #fff;
+}
 
 .no-margin {
     margin: 0;
@@ -245,6 +248,9 @@ a.dropdown-taglist:hover {
 .article-details {
     margin-top: 20px;
 }
+main .article-details a {
+    color: #80cbc4 !important;
+}
 
 .date-modified {
     color: #666;
@@ -261,7 +267,7 @@ main .pagination a, main .pagination a:link {
 
 #page-archives dd {
     font-size: 1.4em;
-    color: #ff6d00;
+    color: #aed581;
 }
 
 footer.page-footer {

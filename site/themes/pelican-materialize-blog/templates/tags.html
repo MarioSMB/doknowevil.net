@@ -12,7 +12,7 @@
 
     {%- for tag, articles in tags|sort_by_article_count %}
       <div class="col s6 m4">
-        <div class="card-panel grey darken-3">
+        <div class="card-panel hoverable grey darken-3">
           <h4><a href="{{ SITEURL }}/{{ tag.url }}" class="teal-text text-lighten-3">{{ tag }}</a></h4>
           <p>{{ articles|count }} Articles</p>
         </div>
