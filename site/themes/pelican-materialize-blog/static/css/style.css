@@ -265,7 +265,15 @@ input[type="search"] {
   height: 60px !important; /* or height of nav */
   margin: 0;
 }
-
+.input-field input[type=search] {
+    padding-left: 2rem;
+}
+.input-field input[type=search]:focus {
+    background-color: #212121;
+    border: 0;
+    box-shadow: none;
+    color: #fff;
+}
 #page-archives dt {
     font-size: 1.6em;
 }

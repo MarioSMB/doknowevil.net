@@ -17,7 +17,7 @@ THEME = 'pelican-materialize-blog'
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search'))
 PLUGIN_PATHS = ["plugins", "/home/z/dev/pelican-plugins/"]
-PLUGINS = ["assets", "liquid_tags", "sitemap", "tipue_search"]
+PLUGINS = ["liquid_tags", "sitemap", "tipue_search"]
 
 TIPUE_SEARCH = True
 
@@ -46,6 +46,20 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 5
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
