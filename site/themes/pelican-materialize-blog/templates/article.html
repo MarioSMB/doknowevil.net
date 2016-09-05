@@ -18,11 +18,7 @@
 
 {% block content %}
   <article itemscope itemtype="http://schema.org/Article" class="card-panel grey darken-3">
-    <h1 itemprop="name">
-
-        {{ article.title }}
-
-    </h1>
+    <h1 itemprop="name">{{ article.title }}</h1>
     <div class="divider"></div>
     <div class="flow-text section no-padding" itemprop="text">
       {{ article.content }}

@@ -61,6 +61,9 @@ article h6 {
     color: #bdbdbd;
 }
 
+article .flow-text h1 {
+    color: #b0bec5;
+}
 article .flow-text h2, article .flow-text h3, article .flow-text h4, article .flow-text h5, article .flow-text h6 {
     text-align: left;
     color: #e0e0e0;
