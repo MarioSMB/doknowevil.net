@@ -4,7 +4,7 @@
       <div class="col s12">
         <a href="/" class="breadcrumb"><i class="material-icons">home</i></a>
         {% for crumb in breadcrumbs %}
-        <a href="{{ crumb.url|e }}.html" class="breadcrumb">{{ crumb.name }}</a>
+        <a href="{{ crumb.url|e }}" class="breadcrumb">{{ crumb.name|e }}</a>
         {% endfor %}
       </div>
     </div>

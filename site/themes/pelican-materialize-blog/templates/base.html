@@ -101,7 +101,7 @@
           {{ macros.render_breadcrumbs([{'url': '#', 'name': page.title }]) }}
         {% endif %}
         {% if article %}
-          {{ macros.render_breadcrumbs([{'url': 'archives', 'name': 'Archives' },{'url': '#', 'name': article.title }]) }}
+          {{ macros.render_breadcrumbs([{'url': 'archives', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
         {% endif %}
       {% endblock breadcrumbs %}
   </header>

@@ -19,9 +19,9 @@
 {% block content %}
   <article itemscope itemtype="http://schema.org/Article" class="card-panel grey darken-3">
     <h1 itemprop="name">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" class="teal-text text-lighten-3" title="Permalink {{ article.title|striptags }}">
+
         {{ article.title }}
-      </a>
+
     </h1>
     <div class="divider"></div>
     <div class="flow-text section no-padding" itemprop="text">
@@ -31,7 +31,9 @@
     <div class="row article-details">
       <div class="col m4 s12">
         <h6><i class="material-icons md18 vertical-align-middle">date_range</i> Date Published</h6>
-        <time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="dateCreated">{{ article.locale_date }}</time>
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" class="teal-text text-lighten-3" title="Permalink {{ article.title|striptags }}">
+          <time datetime="{{ article.date.strftime('%Y-%m-%d') }}" itemprop="dateCreated">{{ article.locale_date }}</time>
+        </a>
         {% if article.modified %}
           <br/>
           <div class="date-modified">
