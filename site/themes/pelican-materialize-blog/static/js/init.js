@@ -11,6 +11,5 @@
     $('#search').focusout(function() {
       $(this).css('width', '0');
     });
-    $('#search').css('width', '0');
   });
 })(jQuery);
