@@ -4,6 +4,10 @@
   Search {{ super() }}
 {% endblock title %}
 
+{% block breadcrumbs %}
+  {{ macros.render_breadcrumbs([{'url': '/search.html', 'name': 'Search' }]) }}
+{% endblock %}
+
 {% block extra_css %}
   <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/vendor/tipue_search/css/tipue_search.css" />
 {% endblock %}

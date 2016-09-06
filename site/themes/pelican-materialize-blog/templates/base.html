@@ -107,9 +107,9 @@
     </nav>
     {% block breadcrumbs %}
       {% if page %}
-        {{ macros.render_breadcrumbs([{'url': page.slug, 'name': page.title }]) }}
+        {{ macros.render_breadcrumbs([{'url': page.url, 'name': page.title }]) }}
       {% elif article %}
-        {{ macros.render_breadcrumbs([{'url': '/archives.html', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
+        {{ macros.render_breadcrumbs([{'url': '/archives.html', 'name': 'Archives' }, {'url': article.url, 'name': article.title }]) }}
       {% endif %}
     {% endblock breadcrumbs %}
     {% block parallax %}

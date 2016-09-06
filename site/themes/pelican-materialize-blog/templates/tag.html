@@ -3,7 +3,7 @@
 {% block title %}{{ SITENAME }} - Articles tagged "{{ tag }}"{% endblock %}
 
 {% block breadcrumbs %}
-  {{ macros.render_breadcrumbs([{'url': '/tags', 'name': 'Tags'}, {'url': '#', 'name': tag }]) }}
+  {{ macros.render_breadcrumbs([{'url': '/tags.html', 'name': 'Tags'}, {'url': '#', 'name': tag }]) }}
 {% endblock %}
 
 {% block content %}

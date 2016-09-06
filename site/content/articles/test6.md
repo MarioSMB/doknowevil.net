@@ -1,8 +1,8 @@
-Title: My Other Really Cool Post
+Title: Some Really Cool Post
 Date: 2013-11-05 10:20
 Category: Python
 Tags: ice cream, parties
-Slug: my-other-really-cool-post
+Slug: some-really-cool-post
 Authors: Tyler Mulligan
 Summary:
     Raindrops on roses

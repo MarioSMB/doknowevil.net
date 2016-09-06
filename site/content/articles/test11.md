@@ -1,18 +1,12 @@
-Title: My Other Really Cool Post 6
+Title: Something About Things
 Date: 2016-03-11 10:20
 Category: Python
 Tags: rainbows, parties, tulips and threelips
 Slug: my-other-really-cool-post-6
 Authors: Tyler Mulligan
 Summary:
-    Raindrops on roses
-    Whiskers on kittens
-    <strong>brown paper packages</strong>
-    
-* test 1
-    * test 2
-    * test 3
-
+    A list of tuples (Title, URL) to appear in the “social” section.
+    TWITTER_USERNAME. Allows for adding a button to articles to encourage others to tweet about them. Add your Twitter username if you want this button to appear.
 
 ```
 import configparser
@@ -21,8 +15,20 @@ import json
 import os
 from colour import Color
 from math import ceil
+```
+    
+Raindrops on roses
+
+Whiskers on kittens    
+   
+<strong>brown paper packages</strong>
+
+* test 1
+    * test 2
+    * test 3
 
 
+```
 def main():
 
     args = parse_args()
