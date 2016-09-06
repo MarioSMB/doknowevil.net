@@ -38,7 +38,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background: #313131;
+    background: #212121;
 }
 
 header {
@@ -48,6 +48,10 @@ header {
 main {
     flex: 1 0 auto;
     z-index: 100;
+}
+
+.page-index {
+    margin-top: -5rem;
 }
 
 blockquote {
@@ -81,7 +85,7 @@ article h1:first-of-type {
 }
 
 article.card-panel {
-    margin: -25.5rem 0 1rem 0;
+    margin: -30rem 0 1rem 0;
 }
 
 pre {

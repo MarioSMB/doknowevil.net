@@ -8,10 +8,14 @@
 
 {% block content %}
 
-  {% for article in articles_page.object_list %}
-    {% include "article_detail.html" %}
-  {% endfor %}
+  <div class="page-index">
 
-  {% include "pagination.html" %}
+    {% for article in articles_page.object_list %}
+      {% include "article_detail.html" %}
+    {% endfor %}
+
+    {% include "pagination.html" %}
+
+  </div>
 
 {% endblock %}
