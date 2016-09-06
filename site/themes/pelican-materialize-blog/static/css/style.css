@@ -274,6 +274,15 @@ main .pagination a, main .pagination a:link {
     color: #aaaaaa;
 }
 
+a.article-name {
+    color: #78909c !important;
+}
+
+a.article-name:hover {
+    color: #212121 !important;
+    text-decoration: none;
+}
+
 input[type="search"] {
   height: 64px !important; /* or height of nav */
   margin: 0;
