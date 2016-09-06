@@ -5,5 +5,12 @@
     $('.dropdown-taglist').dropdown();
     $('.materialboxed').materialbox();
     $('.parallax').parallax();
+    $('#search').focusin(function() {
+      $(this).css('width', '200px');
+    });
+    $('#search').focusout(function() {
+      $(this).css('width', '0');
+    });
+    $('#search').css('width', '0');
   });
 })(jQuery);

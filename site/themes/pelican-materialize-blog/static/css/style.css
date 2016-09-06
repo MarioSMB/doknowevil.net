@@ -51,7 +51,7 @@ main {
 }
 
 .page-index {
-    margin-top: -5rem;
+    margin-top: -6rem;
 }
 
 blockquote {
@@ -147,6 +147,10 @@ a.breadcrumb:hover {
 
 .no-margin {
     margin: 0;
+}
+
+#search {
+    width: 0;
 }
 
 .highlighttable {
@@ -275,7 +279,7 @@ input[type="search"] {
   margin: 0;
 }
 .input-field input[type=search] {
-    padding-left: 2rem;
+    /*padding-left: 2rem;*/
 }
 .input-field input[type=search]:focus {
     background-color: #1c2529;
