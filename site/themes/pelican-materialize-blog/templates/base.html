@@ -107,14 +107,15 @@
     {% block breadcrumbs %}
       {% if page %}
         {{ macros.render_breadcrumbs([{'url': page.slug, 'name': page.title }]) }}
-      {% endif %}
-      {% if article %}
+      {% elif article %}
         {{ macros.render_breadcrumbs([{'url': '/archives.html', 'name': 'Archives' }, {'url': article.slug, 'name': article.title }]) }}
-        <div class="parallax-container">
-          <div class="parallax"><img src="/theme/images/test-wide2.png"></div>
-        </div>
       {% endif %}
     {% endblock breadcrumbs %}
+    {% block parallax %}
+      {% if article %}
+        {{ macros.render_parallax("/theme/images/test-wide2.png") }}
+      {% endif %}
+    {% endblock %}
   </header>
 
   <main>

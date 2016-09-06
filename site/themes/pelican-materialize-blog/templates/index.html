@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 
-{% block breadcrumbs %}
-  <div class="parallax-container parallax-container-sm">
-    <div class="parallax"><img src="/theme/images/test-wide.png"></div>
-  </div>
+{% block parallax %}
+  {{ macros.render_parallax("/theme/images/test-wide.png", class='parallax-container-sm') }}
 {% endblock %}
 
 {% block content %}

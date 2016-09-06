@@ -10,3 +10,9 @@
     </div>
   </nav>
 {%- endmacro %}
+
+{% macro render_parallax(image, class='') -%}
+  <div class="parallax-container {{ class }}">
+    <div class="parallax"><img src="{{ image }}"></div>
+  </div>
+{%- endmacro %}
