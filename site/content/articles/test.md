@@ -3,7 +3,7 @@ Date: 2014-03-12 10:20
 Category: Review
 Image: test.jpg
 
-Following is a review of my favorite mechanical keyboard.
+Following is a `review` of my favorite mechanical keyboard.
 
 There are two ways to specify the identifier:
 

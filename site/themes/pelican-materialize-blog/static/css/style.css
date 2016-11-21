@@ -93,6 +93,11 @@ pre {
     padding: 0.5em;
 }
 
+code {
+    background: #2b2b2b;
+    padding: 1px 4px;
+}
+
 main a, main a:link {
     color: #4db6ac;
 }
