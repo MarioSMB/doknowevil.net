@@ -1,6 +1,6 @@
 # doknowevil.net
 
-I wanted a statically generated blog. I started with Pelican, and made a theme. No new content yet.
+I wanted a statically generated blog. I started with [pelican](http://blog.getpelican.com/), and made a theme. No new content yet.
 
 ![dke theme](dke.png)
 
@@ -22,3 +22,7 @@ Start up the live-reload development server with:
 ```
 make serve
 ```
+
+## License
+
+MIT
